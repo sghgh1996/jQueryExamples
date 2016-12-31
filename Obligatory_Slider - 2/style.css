@@ -1,0 +1,55 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'b yekan';
+}
+body{
+	width:900px;
+	margin: 100px auto;
+}
+div.main{
+	width: 800px;
+	height: 500px;
+	margin:0 auto;
+	float: left;
+	display: inline-block;
+	overflow: hidden;
+}
+.main ul{
+	list-style: none;
+	width: 10000px;
+}
+.main li{
+	float: left;
+}
+div.arrows{
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	margin-top: 225px;
+	float: left;
+	transition: all 1s;
+}
+div.arrows:hover{
+	cursor: pointer;
+}
+div#right_arrow{
+	left: 0;
+}
+div#right_arrow:hover{
+	-webkit-transform: translatex(10px);
+	-moz-transform: translatex(10px);
+	-ms-transform: translatex(10px);
+	-o-transform: translatex(10px);
+	transform: translatex(10px);
+}
+div#left_arrow{
+	right: 0;
+}
+div#left_arrow:hover{
+	-webkit-transform: translatex(-10px);
+	-moz-transform: translatex(-10px);
+	-ms-transform: translatex(-10px);
+	-o-transform: translatex(-10px);
+	transform: translatex(-10px);
+}

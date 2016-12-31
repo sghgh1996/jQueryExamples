@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>سجاد قنبری نسب</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="jquery-1.11.3.js"></script>
+</head>
+<body>
+    <div id="left_arrow" class="arrows">
+        <img src="img/left_arrow.png" alt=""/>
+    </div>
+
+    <div class="main">
+        <ul>
+            <li><img src="img/1.jpg" alt="image"/></li>
+            <li><img src="img/2.jpg" alt="image"/></li>
+            <li><img src="img/3.jpg" alt="image"/></li>
+            <li><img src="img/4.jpg" alt="image"/></li>
+        </ul>
+
+    </div>
+
+    <div id="right_arrow" class="arrows">
+        <img src="img/right_arrow.png" alt=""/>
+    </div>
+
+    <script type="text/javascript" src="slider.js"></script>
+    <script type="text/javascript">
+    var slider = new Slider($('div.main ul'), $('div.arrows'));
+    slider.nav.on('click', function(){
+        slider.setCurrent($(this).attr('id'));
+        slider.transition();
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'b yekan';
+	direction: rtl;
+}
+.main{
+	width: 600px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	margin-top: 100px;
+	padding: 20px;
+	background-color: #0ff;
+	text-align: justify;
+	transition: all 1s;
+}
+button{
+	display: inline-block;
+}
+#inc{
+	margin: 20px 600px 0 0;
+	text-align: center;
+	font-family: 'calibri';
+	padding: 5px;
+}
+#dec{
+	margin: 20px 0px 0 600px;
+	text-align: center;
+	font-family: 'calibri';
+	padding: 5px;
+}

@@ -1,0 +1,60 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0;
+    font-family: "b yekan";
+    direction: rtl;
+}
+body{
+    background-color: darkslategrey;
+}
+.main{
+    width: 600px;
+    left: 0;
+    right: 0;
+    margin: 50px auto auto auto;
+    color: antiquewhite;
+    
+}
+.main p{
+    font-size: 21px;
+    margin-bottom: 25px;
+}
+.close{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-weight: bold;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+#contactForm{
+    background-color: cadetblue;
+    border-radius: 10px;
+    width: 500px;
+    height: 300px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    color: black;
+    padding: 50px;
+}
+.js #contactForm{
+    background-color: cadetblue;
+    border-radius: 10px;
+    width: 500px;
+    height: 300px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    color: black;
+    padding: 50px;
+
+    display: none;
+    position: absolute;
+    top: 10px;
+}
+.formTable{
+    text-align: center;
+}
+.formTable tr{
+    height: 50px;
+}

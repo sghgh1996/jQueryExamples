@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<title>تماس با ما</title>
+	<meta charset="UTF-8">
+	<script src="jquery-1.11.3.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+<script type="text/javascript">
+	(function(){
+		var arr = [
+			{
+				name:'sadjad',
+				sport:'ping pong'
+			},
+			{
+				name:'ali',
+				sport:'swim'
+			},
+			{
+				name:'shadi',
+				sport:'soccer'
+			},
+			{
+				name:'hamid',
+				sport:'swim'
+			},
+			{
+				name:'iman',
+				sport:'swim'
+			}
+		];
+		arr = $.grep(arr, function(obj, index){
+			return obj.sport === 'swim';
+		});
+
+		console.log(arr);
+	})();
+
+
+</script>
+</body>
+</html>

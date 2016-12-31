@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<title>تماس با ما</title>
+	<meta charset="UTF-8">
+	<script src="jquery-1.11.3.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	<div class="main">
+		<h2 style="text-align:center;">تماس با ما</h2>
+		<p>
+			به جای این متن هر متنی میتواند باشد.
+			اگر کاربر جاوااسکریپت مرورگر خود را غیر فعال کند فرم بصورت عادی نمایش داده میشود.
+			اما در غیر اینصورت فرم با افکت های جاوااسکریپت(کتابخانه جی کوئری) نمایش داده میشود
+		</p>
+		<form id="contactForm">
+			<table cellspacing="0" cellpadding="0" border="1" class="formTable">
+				<tr>
+					<td colspan="2"><h3>فرم تماس</h3></td>
+				</tr>
+				<tr>
+					<td style="width: 25%;">نام و نام خانوادگی</td>
+					<td><input type="text" name="name"></td>
+				</tr>
+				<tr>
+					<td style="width: 25%;">پست الکترونیکی</td>
+					<td><input type="text" name="email"></td>
+				</tr>
+				<tr>
+					<td style="width: 25%;">پیغام</td>
+					<td><textarea maxlength="40" style="max-height: 100px;max-width: 200px;"></textarea></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" value="ارسال" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<script>
+	(function(){
+		$('html').addClass('js');
+
+		var contactForm = {
+			container: $('#contactForm'),
+
+			config:{
+				effect: 'slideToggle',
+				speed: 1000
+			},
+
+			init: function(config){
+				$.extend(this.config, config);
+
+				$('<button></button>', {
+					text:'نمایش فرم تماس',
+					id:'showContactForm'
+				}).insertAfter('p');
+				$('#showContactForm').on('click', this.show);
+			},
+
+			show: function(){
+				if(contactForm.container.is(':hidden')){
+					contactForm.close.call(contactForm.container);
+					contactForm.container[contactForm.config.effect](contactForm.config.speed);
+				}
+			},
+
+			close: function(){
+				var $this = $(this); // #contactForm
+				if($this.find('span.close').length) return;
+
+				$('<span class=close>X</span>')
+				.prependTo($this)
+				.on('click', function(){
+					$this[contactForm.config.effect](contactForm.config.speed);
+				});
+			}
+		};
+
+		contactForm.init({
+			effect: 'fadeToggle',
+			speed:500
+		});
+	})();
+	</script>
+</body>
+</html>
